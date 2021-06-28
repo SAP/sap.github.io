@@ -1,6 +1,31 @@
 <head>
   <meta http-equiv="refresh" content="5; URL=https://developers.sap.com/open-source.html" />
+
+  <script>
+    // Redirect for sap.github.io/chevrotin to the dedicated chevrotin.io pages
+    if (window.location.href.startsWith("https://sap.github.io/chevrotin")) {
+      pathname = window.location.pathname
+
+      // custom path mappings
+      // sap.github.io/chevrotin/performance -> chevrotain.io/performance
+      // sap.github.io/chevrotin/playground ->  chevrotain.io/playground
+      // sap.github.io/chevrotin/docs -> chevrotain.io/docs
+      // * -> /
+      if (window.location.href.startsWith("https://sap.github.io/chevrotin/performance")) {
+        pathname = pathname.replace("chevrotin/performance", "performance")
+      } else if (window.location.href.startsWith("https://sap.github.io/chevrotin/playground")) {
+        pathname = pathname.replace("chevrotin/playground", "playground")
+      } else if (window.location.href.startsWith("https://sap.github.io/chevrotin/docs")) {
+        pathname = pathname.replace("chevrotin/docs", "docs")
+      } else {
+        pathname = "/"
+      }
+      window.location.replace("https://chevrotain.io" + pathname + window.location.search);
+    }
+  </script>
 </head>
+
 <body>
-  <p>If you are not redirected in five seconds, please navigate manually to <a href="https://developers.sap.com/open-source.html">https://developers.sap.com/open-source.html</a>.</p>
+  <p>If you are not redirected in five seconds, please navigate manually to <a
+      href="https://developers.sap.com/open-source.html">https://developers.sap.com/open-source.html</a>.</p>
 </body>
