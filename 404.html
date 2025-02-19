@@ -4,7 +4,7 @@
   <script>
     // Redirect for sap.github.io/chevrotin to the dedicated chevrotin.io pages
     if (window.location.href.startsWith("https://sap.github.io/chevrotin")) {
-      pathname = window.location.pathname
+     var pathname = window.location.pathname
 
       // custom path mappings
       // sap.github.io/chevrotin/performance -> chevrotain.io/performance
@@ -22,6 +22,14 @@
       }
       window.location.replace("https://chevrotain.io" + pathname + window.location.search);
     }
+
+    // Redirect for sap.github.io/open-resource-discovery to the dedicated open-resource-discovery org
+    if (window.location.href.startsWith("https://sap.github.io/open-resource-discovery")) {
+        var newLocation = "https://open-resource-discovery.github.io/specification";
+        var pathname = window.location.pathname.replace("/open-resource-discovery", "")
+        window.location.replace(newLocation + pathname);
+    }
+    
   </script>
 </head>
 
