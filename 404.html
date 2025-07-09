@@ -23,6 +23,11 @@
       window.location.replace("https://chevrotain.io" + pathname + window.location.search);
     }
 
+    // Redirect for old sap.github.io/openui5-docs to new https://ui5.github.io/docs repository
+    if (window.location.href.startsWith("https://sap.github.io/openui5-docs")) {
+        window.location.replace("https://ui5.github.io/docs" + pathname + window.location.search);
+    }
+
     // Redirect for sap.github.io/open-resource-discovery to the dedicated open-resource-discovery org
     if (window.location.href.startsWith("https://sap.github.io/open-resource-discovery")) {
         var newLocation = "https://open-resource-discovery.github.io/specification";
