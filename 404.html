@@ -25,6 +25,7 @@
 
     // Redirect for old sap.github.io/openui5-docs to new https://ui5.github.io/docs repository
     if (window.location.href.startsWith("https://sap.github.io/openui5-docs")) {
+        var pathname = window.location.pathname.replace("/openui5-docs", "")
         window.location.replace("https://ui5.github.io/docs" + pathname + window.location.search);
     }
 
