@@ -33,6 +33,12 @@
         var pathname = window.location.pathname.replace("/openui5-sample-app", "");
         window.location.replace("https://ui5.github.io/sample-app" + pathname + window.location.search);
     }
+
+    // Redirect for old https://sap.github.io/ui5-typescript to new https://ui5.github.io/typescript repository
+    if (window.location.href.startsWith("https://sap.github.io/ui5-typescript")) {
+        var pathname = window.location.pathname.replace("/ui5-typescript", "");
+        window.location.replace("https://ui5.github.io/typescript" + pathname + window.location.search);
+    }
    
 
     // Redirect for sap.github.io/open-resource-discovery to the dedicated open-resource-discovery org
