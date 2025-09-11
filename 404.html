@@ -46,6 +46,12 @@
         window.location.replace("https://ui5.github.io/webcomponents" + pathname + window.location.search);
     }
 
+    // Redirect for old https://sap.github.io/ui5-webcomponents-react to new https://ui5.github.io/webcomponents-react repository
+    if (window.location.href.startsWith("https://sap.github.io/ui5-webcomponents-react")) {
+        var pathname = window.location.pathname.replace("/ui5-webcomponents-react", "");
+        window.location.replace("https://ui5.github.io/webcomponents-react" + pathname + window.location.search);
+    }
+
     // Redirect for old https://sap.github.io/ui5-tooling to new https://ui5.github.io/cli repository
     if (window.location.href.startsWith("https://sap.github.io/ui5-tooling")) {
         var pathname = window.location.pathname.replace("/ui5-tooling", "");
