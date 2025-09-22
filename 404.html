@@ -58,6 +58,12 @@
         window.location.replace("https://ui5.github.io/cli" + pathname + window.location.search);
     }
 
+    // Redirect for old https://sap.github.io/ui5-inspector to new https://ui5.github.io/inspector repository
+    if (window.location.href.startsWith("https://sap.github.io/ui5-inspector")) {
+        var pathname = window.location.pathname.replace("/ui5-inspector", "");
+        window.location.replace("https://ui5.github.io/inspector" + pathname + window.location.search);
+    }
+
     // Redirect for sap.github.io/open-resource-discovery to the dedicated open-resource-discovery org
     if (window.location.href.startsWith("https://sap.github.io/open-resource-discovery")) {
         var newLocation = "https://open-resource-discovery.github.io/specification";
